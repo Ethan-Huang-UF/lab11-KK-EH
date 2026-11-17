@@ -1,16 +1,14 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
+# https://github.com/Ethan-Huang-UF/lab11-KK-EH.git
+# Kanishk: Part 1 and Ethan: Part 2 tests
 
-One function per operation, in order.
-"""
-# First example
+import math
+
+
 def square_root(a):
     try:
         return math.sqrt(a)
     except ValueError:
         raise ValueError("Cannot find the square root of a negative number.")
-
 
 def hypotenuse(a, b):
     return math.hypot(a, b)

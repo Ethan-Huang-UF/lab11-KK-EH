@@ -54,11 +54,15 @@ if __name__ == "__main__":
     unittest.main()
 
     ######### Partner 2
-    # def test_add(self): # 3 assertions
-    #     fill in code
+     def test_add(self): # 3 assertions
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(-4, 1), -3)
+        self.assertEqual(add(0, 0), 0)
 
-    # def test_subtract(self): # 3 assertions
-    #     fill in code
+     def test_subtract(self): # 3 assertions
+        self.assertEqual(subtract(5, 3), 2)
+        self.assertEqual(subtract(3, 5), -2)
+        self.assertEqual(subtract(0, 0), 0)
     # ##########################
 
     ######## Partner 1
@@ -70,18 +74,18 @@ if __name__ == "__main__":
     # ##########################
 
     ######## Partner 2
-    # def test_divide_by_zero(self): # 1 assertion
-    #     # call division function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     div(0, 5)
-    #     fill in code
+     def test_divide_by_zero(self): # 1 assertion
+        with self.assertRaises(ZeroDivisionError):
+            div(5, 0)
 
-    # def test_logarithm(self): # 3 assertions
-    #     fill in code
+     def test_logarithm(self): # 3 assertions
+        self.assertAlmostEqual(logarithm(8, 2), 3)
+        self.assertAlmostEqual(logarithm(100, 10), 2)
+        self.assertAlmostEqual(logarithm(1, 5), 0)
 
-    # def test_log_invalid_base(self): # 1 assertion
-    #     # use same technique from test_divide_by_zero
-    #     fill in code
+     def test_log_invalid_base(self): # 1 assertion
+        with self.assertRaises(ValueError):
+            logarithm(5, 0)
     # ##########################
     
     ######## Partner 1
